@@ -1,0 +1,21 @@
+{
+  "name": "node-pre-gyp-npmrc-helper",
+  "version": "1.0.0",
+  "description": "util for npm scripts to call out to node-pre-gyp but get arguments from npmrc",
+  "main": "index.js",
+  "bin": {
+    "npg-npmrc-helper": "bin/cmd.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/maxkorp/node-pre-gyp-npmrc-helper.git"
+  },
+  "peerDependencies": {
+    "node-pre-gyp": "~0.6.7"
+  },
+  "author": "Maximiliano Korp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxkorp/node-pre-gyp-npmrc-helper/issues"
+  }
+}
