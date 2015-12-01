@@ -4,7 +4,7 @@
   "description": "util for npm scripts to call out to node-pre-gyp but get arguments from npmrc",
   "main": "index.js",
   "bin": {
-    "npg-npmrc-helper": "bin/cmd.js"
+    "npg-npmrc-helper": "index.js"
   },
   "repository": {
     "type": "git",
