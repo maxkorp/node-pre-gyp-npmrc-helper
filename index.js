@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 var cp = require('child_process');
+var path = require('path');
 var npgCommands = Array.prototype.slice.call(process.argv, 2);
 if (!npgCommands.length) {
   console.error('no commands specified');
@@ -7,7 +8,8 @@ if (!npgCommands.length) {
 }
 
 var cmd = 'node';
-var args = ['node_modules/.bin/node-pre-gyp'].concat(npgCommands);
+var npgPath = path.resolve(".", "node_modules", ".bin", "node-pre-gyp").replace(/\s/g, "\\$&");
+var args = [npgPath].concat(npgCommands);
 
 ['runtime', 'arch', 'target', 'disturl'].forEach(function(config) {
   var val = process.env['npm_config_' + config];
