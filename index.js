@@ -11,7 +11,7 @@ var cmd = 'node';
 var npgPath = path.resolve(".", "node_modules", ".bin", "node-pre-gyp").replace(/\s/g, "\\$&");
 var args = [npgPath].concat(npgCommands);
 
-['runtime', 'arch', 'target', 'disturl'].forEach(function(config) {
+['runtime', 'arch', 'target', 'dist-url'].forEach(function(config) {
   var val = process.env['npm_config_' + config];
   if (val) {
     args.push('--' + config + '=' + val);
